@@ -1,0 +1,14 @@
+﻿<Window x:Name="winmenucandidato" x:Class="MenuCandidato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pantallasproyecto"
+        mc:Ignorable="d"
+        Title="MenuCandidato" Height="207.113" Width="246.025">
+    <Grid>
+        <Image x:Name="imgResultados" HorizontalAlignment="Left" Height="113" Margin="55,10,0,0" VerticalAlignment="Top" Width="128" Source="image/resultados.png" Stretch="Fill"/>
+        <Button x:Name="btnresultados" Content="Consultar Resultados" HorizontalAlignment="Left" Margin="55,128,0,0" VerticalAlignment="Top" Width="128" Height="24"/>
+
+    </Grid>
+</Window>

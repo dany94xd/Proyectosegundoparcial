@@ -26,8 +26,8 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="88,263,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="221,263,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnregresar" Content="Regresar" HorizontalAlignment="Left" Margin="88,263,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnsalir" Content="Salir" HorizontalAlignment="Left" Margin="221,263,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

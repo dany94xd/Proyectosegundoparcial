@@ -76,6 +76,12 @@
     <Compile Include="gribpresidentes.xaml.vb">
       <DependentUpon>gribpresidentes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MenuAdmin.xaml.vb">
+      <DependentUpon>MenuAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuCandidato.xaml.vb">
+      <DependentUpon>MenuCandidato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Persona.vb" />
     <Compile Include="Proyecto.vb" />
     <Compile Include="ReporteAdmin.xaml.vb">
@@ -86,6 +92,14 @@
     </Compile>
     <Compile Include="Votante.vb" />
     <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuCandidato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -240,6 +254,7 @@
     <Content Include="Database1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="image\resultados.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
