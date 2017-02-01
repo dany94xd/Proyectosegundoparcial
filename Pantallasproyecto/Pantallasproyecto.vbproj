@@ -71,7 +71,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddVotante.xaml.vb">
+      <DependentUpon>AddVotante.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Administrador.vb" />
+    <Compile Include="AgregarCandidato.xaml.vb">
+      <DependentUpon>AgregarCandidato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Candidato.vb" />
     <Compile Include="gribpresidentes.xaml.vb">
       <DependentUpon>gribpresidentes.xaml</DependentUpon>
@@ -91,10 +97,15 @@
       <DependentUpon>ReporteCandidato.xaml</DependentUpon>
     </Compile>
     <Compile Include="Votante.vb" />
-    <Compile Include="Votantewin.xaml.vb">
-      <DependentUpon>Votantewin.xaml</DependentUpon>
-    </Compile>
+    <Page Include="AddVotante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgregarCandidato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,10 +177,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Menuvotante.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Votantewin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -49,6 +49,10 @@ Public Class LoginAdmin
                 Next
                 If encontrado Then
                     MessageBox.Show("Bienvenido: " & nombre)
+                    Dim anterior As New MenuAdmin
+                    anterior.Owner = Me
+                    Me.Hide()
+                    anterior.Show()
 
 
                 Else
