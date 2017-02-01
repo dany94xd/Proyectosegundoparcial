@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pantallasproyecto"
         mc:Ignorable="d"
-        Title="gribpresidentes" Height="340.167" Width="338.912">
+        Title="gribpresidentes" Height="393.167" Width="338.912">
     <Grid>
         <TabControl x:Name="tabControlDignidades" HorizontalAlignment="Left" Height="270" Margin="10,29,0,0" VerticalAlignment="Top" Width="306">
             <TabItem Header="Presidentes" Loaded="TabItem_Loaded">
@@ -33,6 +33,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
+        <Button x:Name="btnsufragar" Content="Sufragar" HorizontalAlignment="Left" Margin="124,323,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
