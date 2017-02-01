@@ -7,17 +7,18 @@
         mc:Ignorable="d"
         Title="gribpresidentes" Height="340.167" Width="338.912">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="162" Width="311">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="nombre"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="apellido"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="cargo"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="lista"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <TabControl x:Name="tabControlDignidades" HorizontalAlignment="Left" Height="100" Margin="10,29,0,0" VerticalAlignment="Top" Width="100">
+        <TabControl x:Name="tabControlDignidades" HorizontalAlignment="Left" Height="270" Margin="10,29,0,0" VerticalAlignment="Top" Width="306">
             <TabItem Header="Presidentes">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" Height="162" Width="273" ItemsSource="{Binding Path=Candidato}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Nombres}" ClipboardContentBinding="{x:Null}" Header="nombre"/>
+                            <DataGridTextColumn Binding="{Binding Apellidos}" ClipboardContentBinding="{x:Null}" Header="apellido"/>
+                            <DataGridTextColumn Binding="{Binding Descripción}" ClipboardContentBinding="{x:Null}" Header="cargo"/>
+                            <DataGridTextColumn Binding="{Binding Lista}" ClipboardContentBinding="{x:Null}" Header="lista"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
             </TabItem>
             <TabItem Header="Asambleista">
                 <Grid Background="#FFE5E5E5"/>
