@@ -3,7 +3,7 @@ Imports System.Data.OleDb
 
 Public Class gribpresidentes
 
-    Public strbase As String = "G:\Pantallasproyecto\Pantallasproyecto\Database1.mdb"
+    Public strbase As String = "E:\Visual2Parcial\Database1.accdb"
     Public strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strbase
 
     Private dsPersonas As DataSet

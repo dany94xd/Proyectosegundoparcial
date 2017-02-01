@@ -5,14 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pantallasproyecto"
         mc:Ignorable="d"
-        Title="Menuvotante" Height="340.167" Width="375.314">
+        Title="Menuvotante" Height="220.747" Width="375.314">
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="83" Margin="229,110,0,0" VerticalAlignment="Top" Width="75" Source="image/concejo_municipal.jpg" Stretch="Fill"/>
-        <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="83" Margin="212,10,0,0" VerticalAlignment="Top" Width="100" Source="image/pre.jpg" Stretch="Fill"/>
-        <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="83" Margin="229,208,0,0" VerticalAlignment="Top" Width="75" Source="image/asamblea.jpg" Stretch="Fill"/>
-        <Button x:Name="btnpresident" Content="Elegir" HorizontalAlignment="Left" Margin="70,53,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnconse" Content="Elegir" HorizontalAlignment="Left" Margin="70,144,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnasamble" Content="Elegir" HorizontalAlignment="Left" Margin="70,237,0,0" VerticalAlignment="Top" Width="75"/>
+        <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="83" Margin="213,34,0,0" VerticalAlignment="Top" Width="100" Source="image/pre.jpg" Stretch="Fill"/>
+        <Button x:Name="btnelegir" Content="Elegir" HorizontalAlignment="Left" Margin="76,78,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
