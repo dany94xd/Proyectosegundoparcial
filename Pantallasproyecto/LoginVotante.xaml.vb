@@ -3,10 +3,6 @@ Imports System.Data.OleDb
 Imports System.Configuration
 Public Class LoginVotante
     
-    Public strbase As String = "G:\Pantallasproyecto\Pantallasproyecto\Database1.mdb"
-    
-    
-    Public strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strbase
     Dim dsVotantes As New DataSet
     Dim encontrado As Boolean
     Dim nombre As String = ""
@@ -26,21 +22,25 @@ Public Class LoginVotante
 
     Private Sub btnlogin_Click(sender As Object, e As RoutedEventArgs) Handles btnlogin.Click
         encontrado = False
-        Using conexion As New OleDbConnection(strConexion)
-            Dim consulta As String = "Select * FROM Votante"
+        Dim sufrago =false
+        Dim fechasufragio  As String = "" 
+        Using conexion As New OleDbConnection(ConnectionString)
+            Dim consulta As String = "Select * FROM Persona"
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
             dsVotantes = New DataSet("Votante")
             adapter.Fill(dsVotantes, "Votante")
-            For Each votante As DataRow In dsVotantes.Tables("Votante").Rows
+            Dim dt as new DataTable
+            dt = dsVotantes.Tables(0)
+            For Each votante As DataRow In dt.Rows
 
-                If votante("cedula") = txtcedula.Text Then
+                If votante("Cedula") = txtcedula.Text Then
                     encontrado = True
-                    nombre = votante("nombre")
-                    Dim anterior As New Menuvotante
-                    anterior.Owner = Me
-                    Me.Hide()
-                    anterior.Show()
+                    nombre = votante("Nombres") + " "  + votante("Apellidos")
 
+                    if(votante("Sufrago") = "True" )
+                        sufrago = true
+                        fechasufragio = votante("FechaSufragio")
+                    End If
                     Exit For
                 End If
 
@@ -49,6 +49,15 @@ Public Class LoginVotante
             If encontrado Then
                 MessageBox.Show("Bienvenido: " & nombre)
 
+                If sufrago
+                    MessageBox.Show("Usuario ya sufragó la fecha: " + fechasufragio)
+                    return 
+                End If
+
+                    Dim anterior As New Menuvotante
+                    anterior.Owner = Me
+                    Me.Hide()
+                    anterior.Show()
 
             Else
                 MessageBox.Show("Usuario no encontrado...")

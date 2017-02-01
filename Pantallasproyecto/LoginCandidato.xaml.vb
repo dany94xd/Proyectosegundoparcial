@@ -35,7 +35,7 @@ Public Class LoginCandidato
             For Each candidato As DataRow In dt.Rows
                 If candidato("Usuario") = txtusercand.Text AndAlso candidato("Clave") = passcand.Password Then
                     encontrado = True
-                    nombre = candidato("Nombres") + candidato("Apellidos")
+                    nombre = candidato("Nombres")  + " " + candidato("Apellidos")
                     Exit For
                 End If
 
