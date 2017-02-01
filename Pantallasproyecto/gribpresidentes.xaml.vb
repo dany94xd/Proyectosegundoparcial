@@ -29,7 +29,7 @@ WHERE Cargo.CargoId = 2;"
 
             dataGrid.DataContext = dsPersonas
 
-            Votar(2,2)
+           ' Votar(2,2)
         End Using
 
     End Sub
@@ -49,11 +49,10 @@ WHERE Cargo.CargoId = 2;"
                 cmd.Parameters.AddWithValue("CargoId", CargoId)
                 conexion.Open()
                 using reader = cmd.ExecuteReader()
-
-                    While reader.Read()
-                        MessageBox.Show("Usted ya votó para ")
-                    End While
-
+                    if(reader.HasRows)
+                        reader.Read()
+                        MessageBox.Show("Usted ya votó para " + reader("Descripción"))
+                    End If
                 End Using
 
             End Using
