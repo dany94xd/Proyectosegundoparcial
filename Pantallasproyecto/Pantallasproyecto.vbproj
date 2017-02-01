@@ -78,8 +78,22 @@
     </Compile>
     <Compile Include="Persona.vb" />
     <Compile Include="Proyecto.vb" />
+    <Compile Include="ReporteAdmin.xaml.vb">
+      <DependentUpon>ReporteAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCandidato.xaml.vb">
+      <DependentUpon>ReporteCandidato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Votante.vb" />
     <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReporteAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReporteCandidato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="ReporteAdmin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ReporteAdmin" Height="339.861" Width="430.07">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="238" Margin="10,10,0,0" VerticalAlignment="Top" Width="381">
+            <TabItem x:Name="Tabpresi" Header="Presidente">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Gridpresi" HorizontalAlignment="Left" Width="371"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabAsambleista" Header="Asambleistas">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="gribasam" HorizontalAlignment="Left" VerticalAlignment="Top" Height="205" Width="371"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabAsambleista_Copy" Header="Asambleistas" Margin="-2,-2,150,-2">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tabProv" Header="Provinciales" Margin="-92,-2,88,-2">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="gridProvin" HorizontalAlignment="Left" Height="205" Margin="0,0,-11,0" VerticalAlignment="Top" Width="382"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="88,263,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="221,263,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
