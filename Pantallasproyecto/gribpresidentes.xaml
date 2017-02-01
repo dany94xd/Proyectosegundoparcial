@@ -24,15 +24,11 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Parlamentario" Margin="-2,-2,-2,0">
+            <TabItem x:Name="tabprovinciales" Header="Provinciales" Margin="-2,-2,-2,0">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dataGrid1_Copy" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="169" Width="280">
+                    <DataGrid x:Name="datagrib3" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="169" Width="280" ItemsSource="{Binding Path=Candidato}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombres"/>
-                            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Apellidos"/>
-                            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre Partido"/>
-                            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Lista"/>
-                        </DataGrid.Columns>
+                            </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
             </TabItem>

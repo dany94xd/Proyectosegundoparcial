@@ -43,7 +43,7 @@ WHERE Cargo.CargoId = 2;"
             Dim consulta As String = "SELECT Cargo.CargoId, Cargo.Descripción
                                         FROM Voto INNER JOIN Cargo ON (Cargo.CargoId = Voto.CargoId) AND (Voto.CargoId = Cargo.CargoId)
                                         WHERE Voto.PersonaId = @PersonaId AND Voto.CargoId = @CargoId;"
-            using cmd as New OleDbCommand(consulta,conexion)
+            Using cmd As New OleDbCommand(consulta, conexion)
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.AddWithValue("PersonaId", Proyecto.Votante)
                 cmd.Parameters.AddWithValue("CargoId", CargoId)
@@ -83,4 +83,22 @@ WHERE Cargo.CargoId = 4;"
         End
     End Sub
 
+    Private Sub tabprovinciales_Loaded(sender As Object, e As RoutedEventArgs) Handles tabprovinciales.Loaded
+        Using conexion As New OleDbConnection(ConnectionString)
+
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción
+FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId
+WHERE Cargo.CargoId = 5;"
+
+            'Dim adapter As New OleDbDataAdapter(consulta, conexion)
+            Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
+            Dim personaCmdBuilder = New OleDbCommandBuilder(adapter)
+            dsPersonas = New DataSet("Candidato")
+            adapter.FillSchema(dsPersonas, SchemaType.Source)
+
+            adapter.Fill(dsPersonas, "Candidato")
+
+            datagrib3.DataContext = dsPersonas
+        End Using
+    End Sub
 End Class
