@@ -15,9 +15,7 @@ Public Class gribpresidentes
     Private Sub TabItem_Loaded(sender As Object, e As RoutedEventArgs)
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción
-FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId
-WHERE Cargo.CargoId = 2;"
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 2;"
 
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
@@ -40,9 +38,8 @@ WHERE Cargo.CargoId = 2;"
 
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Cargo.CargoId, Cargo.Descripción
-                                        FROM Voto INNER JOIN Cargo ON (Cargo.CargoId = Voto.CargoId) AND (Voto.CargoId = Cargo.CargoId)
-                                        WHERE Voto.PersonaId = @PersonaId AND Voto.CargoId = @CargoId;"
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 2;"
+
             Using cmd As New OleDbCommand(consulta, conexion)
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.AddWithValue("PersonaId", Proyecto.Votante)
@@ -63,9 +60,7 @@ WHERE Cargo.CargoId = 2;"
     Private Sub TabItem_Loaded_1(sender As Object, e As RoutedEventArgs)
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción
-FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId
-WHERE Cargo.CargoId = 4;"
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 4;"
 
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
@@ -86,9 +81,7 @@ WHERE Cargo.CargoId = 4;"
     Private Sub tabprovinciales_Loaded(sender As Object, e As RoutedEventArgs) Handles tabprovinciales.Loaded
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción
-FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId
-WHERE Cargo.CargoId = 5;"
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 5;"
 
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))

@@ -37,10 +37,10 @@ Public Class LoginVotante
                     encontrado = True
                     nombre = votante("Nombres") + " "  + votante("Apellidos")
                     Proyecto.Votante = votante("PersonaId")
-                    if(votante("Sufrago") = "True" )
-                        sufrago = true
-                        fechasufragio = votante("FechaSufragio")
-                    End If
+                    'if(votante("Sufrago") = "True" )
+                    '    sufrago = true
+                    '    fechasufragio = votante("FechaSufragio")
+                    'End If
                     Exit For
                 End If
 

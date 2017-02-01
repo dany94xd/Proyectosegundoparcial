@@ -42,7 +42,10 @@ Public Class LoginCandidato
             Next
             If encontrado Then
                 MessageBox.Show("Bienvenido: " & nombre)
-
+                Dim anterior As New MenuCandidato
+                anterior.Owner = Me
+                Me.Hide()
+                anterior.Show()
 
             Else
                 MessageBox.Show("Usuario no encontrado...")

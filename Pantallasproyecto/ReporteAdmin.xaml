@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ReporteAdmin"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="ReporteAdmin" Height="339.861" Width="430.07">
+    Title="ReporteAdmin" Height="339.861" Width="430.07" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
