@@ -36,7 +36,7 @@ Public Class LoginVotante
                 If votante("Cedula") = txtcedula.Text Then
                     encontrado = True
                     nombre = votante("Nombres") + " "  + votante("Apellidos")
-
+                    Proyecto.Votante = votante("PersonaId")
                     if(votante("Sufrago") = "True" )
                         sufrago = true
                         fechasufragio = votante("FechaSufragio")

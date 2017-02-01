@@ -3,7 +3,8 @@
 Module Proyecto
     
     Public Dim ConnectionString as String  = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-    
+    Property Votante() As Integer
+
     Public sub Connect()
         Try
             Dim appSettings = ConfigurationManager.AppSettings

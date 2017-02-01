@@ -12,10 +12,7 @@
                 <Grid Background="#FFE5E5E5">
                     <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" Height="162" Width="273" ItemsSource="{Binding Path=Candidato}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Nombres}" ClipboardContentBinding="{x:Null}" Header="nombre"/>
-                            <DataGridTextColumn Binding="{Binding Apellidos}" ClipboardContentBinding="{x:Null}" Header="apellido"/>
-                            <DataGridTextColumn Binding="{Binding Descripción}" ClipboardContentBinding="{x:Null}" Header="cargo"/>
-                            <DataGridTextColumn Binding="{Binding Lista}" ClipboardContentBinding="{x:Null}" Header="lista"/>
+
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
