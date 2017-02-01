@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<Elecciones2017>
+  <User>
+    <id>101</id>
+    <user>user1</user>
+    <pass>1234</pass>
+    <nombre>juan</nombre>
+    <direcion>la 20 y goyena</direcion>
+    <telefono>2617778</telefono>
+  </User>
+  <User>
+    <id>102</id>
+    <user>user2</user>
+    <pass>12345</pass>
+    <nombre>juan1</nombre>
+    <direcion>la 20 y goyena</direcion>
+    <telefono>2617778</telefono>
+  </User>
+  <User>
+    <id>103</id>
+    <user>user3</user>
+    <pass>123456</pass>
+    <nombre>juan2</nombre>
+    <direcion>la 20 y goyena</direcion>
+    <telefono>2617778</telefono>
+  </User>
+</Elecciones2017>
