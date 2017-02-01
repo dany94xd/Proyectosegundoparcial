@@ -5,4 +5,8 @@
         Me.Hide()
         anterior.Show()
     End Sub
+
+    Private Sub winagregarcandidato_Closing(sender As Object, e As ComponentModel.CancelEventArgs) Handles winagregarcandidato.Closing
+        End
+    End Sub
 End Class
