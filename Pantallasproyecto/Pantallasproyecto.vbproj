@@ -91,6 +91,9 @@
       <DependentUpon>ReporteCandidato.xaml</DependentUpon>
     </Compile>
     <Compile Include="Votante.vb" />
+    <Compile Include="Votantewin.xaml.vb">
+      <DependentUpon>Votantewin.xaml</DependentUpon>
+    </Compile>
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Menuvotante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Votantewin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

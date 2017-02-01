@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MenuAdmin" Height="300" Width="300">
     <Grid>
-        <Button x:Name="btnAgregarpersona" Content="Agregar Persona" HorizontalAlignment="Left" Margin="42,167,0,0" VerticalAlignment="Top" Width="98"/>
-        <Button x:Name="btnConsultar" Content="Consultar Resultados" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="117"/>
+        <Button x:Name="btnAgregarpersona" Content="Agregar Persona" HorizontalAlignment="Left" Margin="172,26,0,0" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="btnConsultar" Content="Consultar Resultados" HorizontalAlignment="Left" Margin="153,101,0,0" VerticalAlignment="Top" Width="117"/>
+        <Button x:Name="btncandidato" Content="Agregar Candidato" HorizontalAlignment="Left" Margin="148,51,0,0" VerticalAlignment="Top" Width="122"/>
+        <Button x:Name="btnlista" Content="Agregar Lista" HorizontalAlignment="Left" Margin="172,76,0,0" VerticalAlignment="Top" Width="98"/>
 
     </Grid>
 </Window>
