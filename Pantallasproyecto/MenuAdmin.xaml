@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pantallasproyecto"
         mc:Ignorable="d"
-        Title="MenuAdmin" Height="221.008" Width="300">
+        Title="MenuAdmin" Height="221.008" Width="300" Closing="Window_Closing">
     <Grid>
         <Button x:Name="btnAgregarpersona" Content="Agregar Persona" HorizontalAlignment="Left" Margin="172,26,0,0" VerticalAlignment="Top" Width="98"/>
         <Button x:Name="btnConsultar" Content="Consultar Resultados" HorizontalAlignment="Left" Margin="153,101,0,0" VerticalAlignment="Top" Width="117"/>
