@@ -8,7 +8,7 @@
         Title="Menuvotante" Height="220.747" Width="375.314">
     <Grid>
         <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="83" Margin="213,34,0,0" VerticalAlignment="Top" Width="100" Source="image/pre.jpg" Stretch="Fill"/>
-        <Button x:Name="btnconse" Content="Elegir" HorizontalAlignment="Left" Margin="76,78,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnelegir" Content="Elegir" HorizontalAlignment="Left" Margin="76,78,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
