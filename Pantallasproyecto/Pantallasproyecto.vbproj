@@ -254,6 +254,7 @@
     <Content Include="Database1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="image\publicidad.wmv" />
     <Resource Include="image\admin22.jpg" />
     <Resource Include="image\resultados.png" />
   </ItemGroup>

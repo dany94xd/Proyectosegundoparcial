@@ -60,7 +60,7 @@ Public Class gribpresidentes
     Private Sub TabItem_Loaded_1(sender As Object, e As RoutedEventArgs)
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = ""
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 4;"
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
             Dim personaCmdBuilder = New OleDbCommandBuilder(adapter)
@@ -80,7 +80,7 @@ Public Class gribpresidentes
     Private Sub tabprovinciales_Loaded(sender As Object, e As RoutedEventArgs) Handles tabprovinciales.Loaded
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = ""
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 5;"
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
             Dim personaCmdBuilder = New OleDbCommandBuilder(adapter)
@@ -91,5 +91,12 @@ Public Class gribpresidentes
 
             datagrib3.DataContext = dsPersonas
         End Using
+    End Sub
+
+    Private Sub dataGrid_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dataGrid.SelectionChanged
+        'Dim fila As DataRowView = sender.selectitem
+
+        'MessageBox.Show(fila("Nombre"))
+
     End Sub
 End Class

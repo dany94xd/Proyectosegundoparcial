@@ -10,4 +10,9 @@
         Me.Hide()
         anterior.Show()
     End Sub
+
+    Private Sub btningresar_Click(sender As Object, e As RoutedEventArgs) Handles btningresar.Click
+
+
+    End Sub
 End Class
