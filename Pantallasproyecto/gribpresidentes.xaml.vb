@@ -93,10 +93,11 @@ Public Class gribpresidentes
         End Using
     End Sub
 
+    'este metodo es el que selecciona el item o elemento del datagrib'
     Private Sub dataGrid_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dataGrid.SelectionChanged
-        'Dim fila As DataRowView = sender.selectitem
+        Dim fila As DataRowView = sender.SelectedItem
 
-        'MessageBox.Show(fila("Nombre"))
+        MessageBox.Show(fila("Nombre")) 'mesaje con el atributo nombre o partido en este caso del datagrid de presidenets'
 
     End Sub
 End Class
