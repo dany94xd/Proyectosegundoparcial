@@ -15,7 +15,7 @@ Public Class gribpresidentes
     Private Sub TabItem_Loaded(sender As Object, e As RoutedEventArgs)
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 2;"
+            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 2;"
 
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
@@ -38,7 +38,7 @@ Public Class gribpresidentes
 
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 2;"
+            Dim consulta As String = ""
 
             Using cmd As New OleDbCommand(consulta, conexion)
                 cmd.CommandType = CommandType.Text
@@ -60,8 +60,7 @@ Public Class gribpresidentes
     Private Sub TabItem_Loaded_1(sender As Object, e As RoutedEventArgs)
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 4;"
-
+            Dim consulta As String = ""
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
             Dim personaCmdBuilder = New OleDbCommandBuilder(adapter)
@@ -81,8 +80,7 @@ Public Class gribpresidentes
     Private Sub tabprovinciales_Loaded(sender As Object, e As RoutedEventArgs) Handles tabprovinciales.Loaded
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim consulta As String = "SELECT Candidato.CandidatoId, Persona.Nombres, Persona.Apellidos, PartidoPolitico.Nombre, PartidoPolitico.Lista, Cargo.Descripción" & "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId WHERE Cargo.CargoId = 5;"
-
+            Dim consulta As String = ""
             'Dim adapter As New OleDbDataAdapter(consulta, conexion)
             Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
             Dim personaCmdBuilder = New OleDbCommandBuilder(adapter)
