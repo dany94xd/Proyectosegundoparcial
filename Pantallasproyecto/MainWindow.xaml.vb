@@ -20,6 +20,6 @@ Private Sub WinVotaciones_Loaded(sender As Object , e As RoutedEventArgs) Handle
 
     
     Private Sub publicidad1_Loaded(sender As Object, e As RoutedEventArgs) Handles publicidad1.Loaded
-        publicidad1.Play()
+        'publicidad1.Play()
     End Sub
 End Class
