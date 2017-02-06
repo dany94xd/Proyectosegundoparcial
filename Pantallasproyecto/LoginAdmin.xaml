@@ -11,8 +11,8 @@
         <Image HorizontalAlignment="Left" Height="100" Margin="90,10,0,0" VerticalAlignment="Top" Width="100" Source="image/admin.png" Stretch="Fill" Grid.RowSpan="2"/>
         <Label Content="User:" HorizontalAlignment="Left" Margin="51,11,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <Label Content="Password:" HorizontalAlignment="Left" Margin="51,50,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <PasswordBox x:Name="txtpass" HorizontalAlignment="Left" Height="23" Margin="127,50,0,0" VerticalAlignment="Top" Width="115" Grid.Row="1"/>
-        <TextBox x:Name="txtuser" HorizontalAlignment="Left" Height="23" Margin="127,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <PasswordBox x:Name="txtpass" HorizontalAlignment="Left" Height="23" Margin="127,50,0,0" VerticalAlignment="Top" Width="115" Grid.Row="1"  TabIndex="2"/>
+        <TextBox x:Name="txtuser" HorizontalAlignment="Left" Height="23" Margin="127,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1" TabIndex="1"/>
         <Button x:Name="btnregresar" Content="Regresar" HorizontalAlignment="Left" Margin="51,15.476,0,0" VerticalAlignment="Top" Width="75" Grid.Row="2"/>
         <Button x:Name="btnloginad" Content="Login" HorizontalAlignment="Left" Margin="172,15.476,0,0" VerticalAlignment="Top" Width="75" Grid.Row="2" Click="Button_Click"/>
 
