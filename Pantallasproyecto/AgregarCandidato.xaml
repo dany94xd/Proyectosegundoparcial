@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pantallasproyecto"
         mc:Ignorable="d"
-        Title="AgregarCandidato" Height="300" Width="300">
+        Title="AgregarCandidato" Height="423.255" Width="302.326">
     <Grid>
-        <Label x:Name="lbllista" Content="Lista:" HorizontalAlignment="Left" Margin="27,35,0,0" VerticalAlignment="Top" Width="64"/>
-        <Label x:Name="lblpersona" Content="Persona:" HorizontalAlignment="Left" Margin="27,66,0,0" VerticalAlignment="Top" Width="64"/>
-        <Label x:Name="lblcargo" Content="Cargo:" HorizontalAlignment="Left" Margin="27,97,0,0" VerticalAlignment="Top" Width="64"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="136,35,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="136,66,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" Margin="136,101,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnagregar" Content="Agregar" HorizontalAlignment="Left" Margin="163,175,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="Btnregresar" Content="Regresar" HorizontalAlignment="Left" Margin="62,175,0,0" VerticalAlignment="Top" Width="75"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lbllista" Content="Lista:" HorizontalAlignment="Left" Margin="27,35,0,0" VerticalAlignment="Top" Width="64" Grid.Column="1"/>
+        <Label x:Name="lblpersona" Content="Persona:" HorizontalAlignment="Left" Margin="27,66,0,0" VerticalAlignment="Top" Width="64" Grid.Column="1"/>
+        <Label x:Name="lblcargo" Content="Cargo:" HorizontalAlignment="Left" Margin="27,97,0,0" VerticalAlignment="Top" Width="64" Grid.Column="1"/>
+        <ComboBox x:Name="cmbLista" HorizontalAlignment="Left" Margin="136,35,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ComboBox x:Name="cmbPersona" HorizontalAlignment="Left" Margin="136,66,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ComboBox x:Name="cmbCargo" ItemsSource="{Binding Cargo}" SelectedItem="{Binding CargoId}"  DisplayMemberPath="Descripción" HorizontalAlignment="Left" Margin="136,101,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="btnagregar" Content="Agregar" HorizontalAlignment="Left" Margin="160,361,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="Btnregresar" Content="Regresar" HorizontalAlignment="Left" Margin="59,361,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <DataGrid HorizontalAlignment="Left" Margin="27,140,0,0" VerticalAlignment="Top" Height="199" Width="242" Grid.Column="1"/>
 
     </Grid>
 </Window>
