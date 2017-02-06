@@ -161,4 +161,38 @@ Public Class gribpresidentes
     End Sub
 
 
+    Private Sub btnsufragarp_Click(sender As Object, e As RoutedEventArgs) Handles btnsufragarp.Click
+        Dim sql As String = "insert into Voto (PersonaId, CargoId, CandidatoId,Fecha) values(@PersonaId, @CargoId, @CandidatoId, @Fecha)"
+
+        Dim conn As New OleDbConnection(ConnectionString)
+        Dim com As New OleDbCommand(sql, conn)
+        Using conn
+            conn.Open()
+            com.Parameters.AddWithValue("@PersonaId", Proyecto.Votante)
+            com.Parameters.AddWithValue("@CargoId", Integer.Parse(fila("CargoId")))
+            com.Parameters.AddWithValue("@CandidatoId", Integer.Parse(fila("CandidatoId")))
+            com.Parameters.AddWithValue("@Fecha", Date.Now.ToString)
+
+            Dim i = com.ExecuteNonQuery()
+
+            If (i > 0) Then
+                MessageBox.Show("Su voto ha sido registrado correctamente")
+                dataGrid.IsEnabled = False
+                btnsufragarp.IsEnabled = False
+                vpres = True
+            Else
+                MessageBox.Show("Su voto no ha sido registrado, intente nuevamente")
+
+            End If
+        End Using
+
+    End Sub
+
+    Private Sub btnsufragarp_Initialized(sender As Object, e As EventArgs) Handles btnsufragarp.Initialized
+        vpres = False
+        vasam = False
+        vasap = False
+    End Sub
+
+
 End Class
