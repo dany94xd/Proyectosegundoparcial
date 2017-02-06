@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 
 Public Class AddVotante
-
+    Public fila As DataRowView
     Private Sub winagregarvotante_Closing(sender As Object, e As ComponentModel.CancelEventArgs) Handles winagregarvotante.Closing
         End
     End Sub
@@ -34,6 +34,16 @@ Public Class AddVotante
 
             gridPersona.DataContext = dsCandidatos
         End Using
+
+    End Sub
+
+    Private Sub DataGrid_SelectionChanged(sender As Object, e As SelectionChangedEventArgs)
+        fila = sender.SelectedItem
+
+        txtcedula.Text = fila("Cedula")
+        txtnombre.Text = fila("Nombres")
+        txtapellido.Text = fila("Apellidos")
+
 
     End Sub
 End Class
