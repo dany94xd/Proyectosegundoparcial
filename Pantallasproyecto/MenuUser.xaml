@@ -19,6 +19,6 @@
         <Image x:Name="imagevoto" HorizontalAlignment="Left" Height="131" Margin="10,42,0,0" VerticalAlignment="Top" Width="123" Source="image/voto1.jpg" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="131" Margin="0,42,0,0" VerticalAlignment="Top" Width="125" Grid.Column="1" Source="image/vot2.jpg" Stretch="Fill"/>
         <Image Height="131" Margin="5,42,0,0" VerticalAlignment="Top" Grid.Column="2" Source="image/admin.png" Stretch="Fill"/>
-
+        <Button x:Name="btnregresar" Content="Regresar" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="78" Height="24" Grid.Column="1"/>
     </Grid>
 </Window>
