@@ -1,11 +1,13 @@
 ﻿Imports System.Configuration
 
 Module Proyecto
-    
-    Public Dim ConnectionString as String  = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-    Property Votante() As Integer
 
-    Public sub Connect()
+    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
+    Property Votante() As Integer
+    Property Candidato() As Integer
+    Property Cargo() As Integer 'variable global'
+
+    Public Sub Connect()
         Try
             Dim appSettings = ConfigurationManager.AppSettings
 
