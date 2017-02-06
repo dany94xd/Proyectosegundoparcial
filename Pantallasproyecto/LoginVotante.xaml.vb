@@ -57,7 +57,7 @@ Public Class LoginVotante
                     Return
                 End If
 
-                Dim anterior As New Menuvotante
+                Dim anterior As New gribpresidentes
                 anterior.Owner = Me
                 Me.Hide()
                 anterior.Show()

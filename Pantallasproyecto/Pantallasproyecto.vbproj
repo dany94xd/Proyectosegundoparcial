@@ -162,10 +162,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Menuvotante.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Import Include="System.Threading.Tasks" />
@@ -189,9 +185,6 @@
   <ItemGroup>
     <Compile Include="MenuUser.xaml.vb">
       <DependentUpon>MenuUser.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Menuvotante.xaml.vb">
-      <DependentUpon>Menuvotante.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb">
       <SubType>Code</SubType>
