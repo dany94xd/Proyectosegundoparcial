@@ -25,23 +25,26 @@ Public Class LoginCandidato
         encontrado = False
         Using conexion As New OleDbConnection(ConnectionString)
 
-            Dim adapter As New OleDbDataAdapter(New OleDbCommand("SELECT Candidato.CandidatoId, Persona.PersonaId, Persona.Cedula, Persona.Apellidos, Persona.Nombres, Cargo.Descripción, Candidato.Usuario, Candidato.Clave " + 
-                                                                 "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) " + 
-                                                                 "ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId;" , conexion))
+            Dim adapter As New OleDbDataAdapter(New OleDbCommand("SELECT Candidato.CandidatoId, Persona.PersonaId, Persona.Cedula, Persona.Apellidos, Persona.Nombres,Cargo.CargoId, Cargo.Descripción, Candidato.Usuario, Candidato.Clave " +
+                                                                 "FROM Persona INNER JOIN (PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) " +
+                                                                 "ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) ON Persona.PersonaId = Candidato.PersonaId;", conexion))
             dsCandidato = New DataSet()
             adapter.Fill(dsCandidato, "Candidato")
-            dim dt as new DataTable
+            Dim dt As New DataTable
             dt = dsCandidato.Tables(0)
             For Each candidato As DataRow In dt.Rows
                 If candidato("Usuario") = txtusercand.Text AndAlso candidato("Clave") = passcand.Password Then
                     encontrado = True
-                    nombre = candidato("Nombres")  + " " + candidato("Apellidos")
+                    Cargo = candidato("CargoId")
+                    nombre = candidato("Nombres") + " " + candidato("Apellidos")
                     Exit For
                 End If
 
             Next
             If encontrado Then
                 MessageBox.Show("Bienvenido: " & nombre)
+                txtusercand.Text = ""
+                passcand.Password = ""
                 Dim anterior As New MenuCandidato
                 anterior.Owner = Me
                 Me.Hide()
