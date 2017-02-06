@@ -25,4 +25,11 @@
     Private Sub winuser_Closing(sender As Object, e As ComponentModel.CancelEventArgs) Handles winuser.Closing
         End
     End Sub
+
+    Private Sub btnregresar_Click(sender As Object, e As RoutedEventArgs) Handles btnregresar.Click
+        Dim segundaventana As New MainWindow
+        segundaventana.Owner = Me
+        Me.Hide()
+        segundaventana.Show()
+    End Sub
 End Class
