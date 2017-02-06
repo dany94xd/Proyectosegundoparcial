@@ -6,34 +6,42 @@
         xmlns:local="clr-namespace:Pantallasproyecto"
         mc:Ignorable="d"
         Title="gribpresidentes" Height="393.167" Width="338.912">
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <TabControl x:Name="tabControlDignidades" HorizontalAlignment="Left" Height="270" Margin="10,29,0,0" VerticalAlignment="Top" Width="306">
-            <TabItem Header="Presidentes" Loaded="TabItem_Loaded">
+            <TabItem Header="Presidentes" Loaded="TabItem_Loaded" Margin="0,0,-4,-4">
                 <Grid Background="#FFE5E5E5">
-                        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" Height="162" Width="273" ItemsSource="{Binding Path=Candidato}" EnableRowVirtualization="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="76*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" Height="162" Width="273" ItemsSource="{Binding Candidato}" EnableRowVirtualization="False" Grid.ColumnSpan="3">
                         <DataGrid.Columns>
-                          </DataGrid.Columns>
+                        </DataGrid.Columns>
                     </DataGrid>
+                    <Button x:Name="btnsufragarp" Content="Sufragar" HorizontalAlignment="Left" Margin="118,194,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Grid.ColumnSpan="3"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Asambleista" Loaded="TabItem_Loaded_1">
+            <TabItem x:Name="___Sin_nombre_" Header="Asambleista" Loaded="TabItem_Loaded_1">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" Height="162" Width="273" ItemsSource="{Binding Path=Candidato}">
                         <DataGrid.Columns>
-                            </DataGrid.Columns>
+                        </DataGrid.Columns>
                     </DataGrid>
+                    <Button x:Name="btnsugrafara" Content="Sufragar" HorizontalAlignment="Left" Margin="120,187,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabprovinciales" Header="Provinciales" Margin="-2,-2,-2,0">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid x:Name="datagrib3" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="169" Width="280" ItemsSource="{Binding Path=Candidato}">
                         <DataGrid.Columns>
-                            </DataGrid.Columns>
+                        </DataGrid.Columns>
                     </DataGrid>
+                    <Button x:Name="btnsufragarPro" Content="Sufragar" HorizontalAlignment="Left" Margin="117,197,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="btnsufragar" Content="Sufragar" HorizontalAlignment="Left" Margin="124,323,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnterminar" Content="Terminar Votacion" HorizontalAlignment="Left" Margin="114,323,0,0" VerticalAlignment="Top" Width="110"/>
 
     </Grid>
 </Window>
