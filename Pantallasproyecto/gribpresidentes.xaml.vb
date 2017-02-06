@@ -221,4 +221,14 @@ Public Class gribpresidentes
             End If
         End Using
     End Sub
+
+
+    Private Sub btnterminar_Click(sender As Object, e As RoutedEventArgs) Handles btnterminar.Click
+        Dim anterior As New MenuUser
+        anterior.Owner = Me
+        Me.Hide()
+        anterior.Show()
+
+    End Sub
+
 End Class
