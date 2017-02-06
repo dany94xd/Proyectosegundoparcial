@@ -15,7 +15,21 @@ Public Class AddVotante
     End Sub
 
     Private Sub btningresar_Click(sender As Object, e As RoutedEventArgs) Handles btningresar.Click
+        Dim sql As String = "insert into Persona (Cedula, Nombres, Apellidos) values(@Cedula, @Nombres, @Apellidos)"
 
+        Dim conn As New OleDbConnection(ConnectionString)
+        Dim com As New OleDbCommand(sql, conn)
+        Using conn
+            conn.Open()
+            com.Parameters.AddWithValue("@Cedula", (txtcedula.Text))
+            com.Parameters.AddWithValue("@Nombres", (txtnombre.Text))
+            com.Parameters.AddWithValue("@Apellidos", (txtapellido.Text))
+
+
+            Dim i = com.ExecuteNonQuery()
+
+
+        End Using
 
     End Sub
 
@@ -46,4 +60,6 @@ Public Class AddVotante
 
 
     End Sub
+
+
 End Class
