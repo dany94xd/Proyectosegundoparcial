@@ -1,5 +1,7 @@
 ﻿Public Class Persona
 
+    'Clase Persona
+
     Private _cedula As String
     Public Property Cedula() As String
         Get
