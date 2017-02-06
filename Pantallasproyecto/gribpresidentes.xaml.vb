@@ -140,5 +140,25 @@ Public Class gribpresidentes
 
 
 
+    Private Sub datagrib3_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles datagrib3.SelectionChanged
+        fila = sender.SelectedItem
+
+        If Votar(Integer.Parse(fila("CargoId"))) Then
+            MessageBox.Show("Usted ya voto para Provincial")
+            ' deshabilitar la pestana 
+            Return
+        End If
+
+        If MessageBox.Show("Esta seguro de votar por: " + fila("Nombres") + " " + fila("Apellidos"),
+                           "Sistema de votacion", MessageBoxButton.YesNo) = MessageBoxResult.Yes Then
+
+            Dim vid = Proyecto.Votante
+            Dim candid = Integer.Parse(fila("CandidatoId"))
+
+            Dim a As Integer = 0
+            btnsufragarPro.IsEnabled = True
+        End If
+    End Sub
+
 
 End Class
