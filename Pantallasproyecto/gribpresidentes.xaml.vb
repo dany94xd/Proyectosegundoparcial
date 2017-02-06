@@ -7,6 +7,11 @@ Public Class gribpresidentes
     Public fila As DataRowView
     Public vpres, vasam, vasap As Boolean
 
+    Private Sub Listapresidentes_Loaded(sender As Object, e As RoutedEventArgs) Handles Listapresidentes.Loaded
+
+
+
+    End Sub
 
     Private Sub TabItem_Loaded(sender As Object, e As RoutedEventArgs)
         Using conexion As New OleDbConnection(ConnectionString)
@@ -32,6 +37,7 @@ Public Class gribpresidentes
         End Using
 
     End Sub
+
 
     Private Function Votar(CargoId As Integer) As Boolean
         Dim retorno As Boolean = False
@@ -71,7 +77,6 @@ Public Class gribpresidentes
         End Using
     End Sub
 
-
     Private Sub Listapresidentes_Closing(sender As Object, e As ComponentModel.CancelEventArgs) Handles Listapresidentes.Closing
         End
     End Sub
@@ -91,7 +96,6 @@ Public Class gribpresidentes
             datagrib3.DataContext = dsPersonas
         End Using
     End Sub
-
 
     'este metodo es el que selecciona el item o elemento del datagrib'
     Private Sub dataGrid_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dataGrid.SelectionChanged
@@ -114,7 +118,9 @@ Public Class gribpresidentes
         End If
     End Sub
 
+    Private Sub Grid_Loaded(sender As Object, e As RoutedEventArgs)
 
+    End Sub
 
     Private Sub dataGrid1_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dataGrid1.SelectionChanged
         fila = sender.SelectedItem
@@ -140,6 +146,7 @@ Public Class gribpresidentes
 
 
 
+
     Private Sub datagrib3_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles datagrib3.SelectionChanged
         fila = sender.SelectedItem
 
@@ -159,7 +166,6 @@ Public Class gribpresidentes
             btnsufragarPro.IsEnabled = True
         End If
     End Sub
-
 
     Private Sub btnsufragarp_Click(sender As Object, e As RoutedEventArgs) Handles btnsufragarp.Click
         Dim sql As String = "insert into Voto (PersonaId, CargoId, CandidatoId,Fecha) values(@PersonaId, @CargoId, @CandidatoId, @Fecha)"
@@ -194,8 +200,6 @@ Public Class gribpresidentes
         vasap = False
     End Sub
 
-
-
     Private Sub btnsugrafara_Click(sender As Object, e As RoutedEventArgs) Handles btnsugrafara.Click
         Dim sql As String = "insert into Voto (PersonaId, CargoId, CandidatoId,Fecha) values(@PersonaId, @CargoId, @CandidatoId, @Fecha)"
 
@@ -222,15 +226,17 @@ Public Class gribpresidentes
         End Using
     End Sub
 
-
     Private Sub btnterminar_Click(sender As Object, e As RoutedEventArgs) Handles btnterminar.Click
         Dim anterior As New MenuUser
         anterior.Owner = Me
         Me.Hide()
         anterior.Show()
 
-    End Sub
 
+
+
+
+    End Sub
 
     Private Sub btnsufragarPro_Click(sender As Object, e As RoutedEventArgs) Handles btnsufragarPro.Click
         Dim sql As String = "insert into Voto (PersonaId, CargoId, CandidatoId,Fecha) values(@PersonaId, @CargoId, @CandidatoId, @Fecha)"
@@ -257,5 +263,7 @@ Public Class gribpresidentes
             End If
         End Using
     End Sub
+
+
 
 End Class
