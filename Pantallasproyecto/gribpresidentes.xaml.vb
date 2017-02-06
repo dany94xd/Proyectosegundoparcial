@@ -93,6 +93,26 @@ Public Class gribpresidentes
     End Sub
 
 
+    'este metodo es el que selecciona el item o elemento del datagrib'
+    Private Sub dataGrid_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dataGrid.SelectionChanged
+        fila = sender.SelectedItem
+        'Dim sql As String = "insert into Voto (PersonaId, CargoId, CandidatoId,Fecha) values(@PersonaId, @CargoId, @CandidatoId, @Fecha)"
+        If Votar(Integer.Parse(fila("CargoId"))) Then
+            MessageBox.Show("Usted ya voto para Presidente")
+            ' deshabilitar la pestana 
+            Return
+        End If
+
+        If MessageBox.Show("Esta seguro de votar por: " + fila("Nombres") + " " + fila("Apellidos"),
+                           "Sistema de votacion", MessageBoxButton.YesNo) = MessageBoxResult.Yes Then
+
+
+
+            Dim a As Integer = 0
+            btnsufragarp.IsEnabled = True
+
+        End If
+    End Sub
 
 
 
