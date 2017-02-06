@@ -56,4 +56,23 @@ Public Class ReporteAdmin
             gribasam.DataContext = dsCandidatos
         End Using
     End Sub
+
+
+    Private Sub gridProvin_Loaded(sender As Object, e As RoutedEventArgs) Handles gridProvin.Loaded
+        Using conexion As New OleDbConnection(ConnectionString)
+
+            Dim consulta As String = "SELECT Cargo.Descripción, PartidoPolitico.Nombre, Persona.Nombres, Persona.Apellidos, Count(1) AS Conteo FROM Persona INNER JOIN ((PartidoPolitico INNER JOIN (Cargo INNER JOIN Candidato ON Cargo.CargoId = Candidato.CargoId) ON PartidoPolitico.PartidoId = Candidato.PartidoPoliticoId) INNER JOIN Voto ON (Cargo.CargoId = Voto.CargoId) AND (Candidato.CandidatoId = Voto.CandidatoId)) ON Persona.PersonaId = Candidato.PersonaId WHERE(((Voto.CargoId) = 5)) GROUP BY Cargo.Descripción, PartidoPolitico.Nombre, Persona.Nombres, Persona.Apellidos ORDER BY Count(1) DESC;"
+
+            'Dim adapter As New OleDbDataAdapter(consulta, conexion)
+            Dim adapter As New OleDbDataAdapter(New OleDbCommand(consulta, conexion))
+            Dim personaCmdBuilder = New OleDbCommandBuilder(adapter)
+            dsCandidatos = New DataSet("Candidato")
+            'adapter.FillSchema(dsPersonas, SchemaType.Source)
+
+            adapter.Fill(dsCandidatos, "Candidato")
+
+
+            gridProvin.DataContext = dsCandidatos
+        End Using
+    End Sub
 End Class
