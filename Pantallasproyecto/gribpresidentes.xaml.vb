@@ -116,4 +116,29 @@ Public Class gribpresidentes
 
 
 
+    Private Sub dataGrid1_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dataGrid1.SelectionChanged
+        fila = sender.SelectedItem
+
+        If Votar(Integer.Parse(fila("CargoId"))) Then
+            MessageBox.Show("Usted ya voto para Asambleista")
+            ' deshabilitar la pestana 
+            Return
+        End If
+
+        If MessageBox.Show("Esta seguro de votar por: " + fila("Nombres") + " " + fila("Apellidos"),
+                           "Sistema de votacion", MessageBoxButton.YesNo) = MessageBoxResult.Yes Then
+
+            Dim vid = Proyecto.Votante
+            Dim candid = Integer.Parse(fila("CandidatoId"))
+
+            Dim a As Integer = 0
+            btnsugrafara.IsEnabled = True
+
+        End If
+
+    End Sub
+
+
+
+
 End Class
