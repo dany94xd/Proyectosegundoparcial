@@ -9,12 +9,15 @@
         <TabControl HorizontalAlignment="Left" Height="238" Margin="10,10,0,0" VerticalAlignment="Top" Width="381">
             <TabItem x:Name="Tabpresi" Header="Presidente">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="Gridpresi" HorizontalAlignment="Left" Width="371"/>
+                    <DataGrid x:Name="Gridpresi" HorizontalAlignment="Left" Width="371" ItemsSource="{Binding Path=Candidato}">
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabAsambleista" Header="Asambleistas">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="gribasam" HorizontalAlignment="Left" VerticalAlignment="Top" Height="205" Width="371"/>
+                    <DataGrid x:Name="gribasam" HorizontalAlignment="Left" VerticalAlignment="Top" Height="205" Width="371" ItemsSource="{Binding Path=Candidato}">
+
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabAsambleista_Copy" Header="Asambleistas" Margin="-2,-2,150,-2">
@@ -22,7 +25,9 @@
             </TabItem>
             <TabItem x:Name="tabProv" Header="Provinciales" Margin="-92,-2,88,-2">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="gridProvin" HorizontalAlignment="Left" Height="205" Margin="0,0,-11,0" VerticalAlignment="Top" Width="382"/>
+                    <DataGrid x:Name="gridProvin" HorizontalAlignment="Left" Height="205" Margin="0,0,-11,0" VerticalAlignment="Top" Width="382" ItemsSource="{Binding Path=Candidato}">
+
+                    </DataGrid>
                 </Grid>
             </TabItem>
         </TabControl>
