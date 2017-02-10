@@ -52,11 +52,17 @@ Public Class AddVotante
     End Sub
 
     Private Sub DataGrid_SelectionChanged(sender As Object, e As SelectionChangedEventArgs)
-        fila = sender.SelectedItem
+        Try
+            fila = sender.SelectedItem
 
-        txtcedula.Text = fila("Cedula")
-        txtnombre.Text = fila("Nombres")
-        txtapellido.Text = fila("Apellidos")
+            txtcedula.Text = fila("Cedula")
+            txtnombre.Text = fila("Nombres")
+            txtapellido.Text = fila("Apellidos")
+        Catch ex As Exception
+            MsgBox("fila vacia por favor seleccione otra fila")
+        End Try
+
+
 
 
     End Sub
