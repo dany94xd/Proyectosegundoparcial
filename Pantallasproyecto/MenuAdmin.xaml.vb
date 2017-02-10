@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub btnregre_Click(sender As Object, e As RoutedEventArgs) Handles btnregre.Click
-        Dim anterior As New MenuAdmin
+        Dim anterior As New MenuUser
         anterior.Owner = Me
         Me.Hide()
         anterior.Show()
