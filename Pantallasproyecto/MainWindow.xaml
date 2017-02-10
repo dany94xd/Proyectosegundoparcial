@@ -18,11 +18,11 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label x:Name="Lbcreadores" Content="Vinces Daniel  - Castro Christian" Width="196" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="12" Margin="0,28,321,0"/>
-        <Image Height="191" VerticalAlignment="Top" Width="517" Source="image/elecciones.jpg" Stretch="Fill" Margin="0,2,0,0" Grid.Row="1"/>
+        <Image Height="191" VerticalAlignment="Top" Width="517" Source="image/elecciones.jpg" Stretch="Fill" Margin="0,2,0,0" Grid.Row="1" Grid.RowSpan="2"/>
         <Button x:Name="btinciar" Content="Entrar" Height="38" Margin="252,10,162,0" Grid.Row="2" VerticalAlignment="Top" Width="103" Background="#FFF70D22" Foreground="#FFF5F4F4" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" BorderBrush="#FFA2EE1D"/>
         <Button x:Name="btsalir" Content="Salir" Height="38" Margin="397,10,17,0" Grid.Row="2" VerticalAlignment="Top" Width="103" Background="#FFE00E13" FontFamily="Comic Sans MS" FontSize="18" FontWeight="Bold" Foreground="#FFF1ECEC" BorderBrush="#FFB1F141" OpacityMask="Black"/>
-        
-        <MediaElement x:Name="publicidad1" HorizontalAlignment="Left" Height="75" Margin="0,-3,0,0" VerticalAlignment="Top" Width="517" Source="image/publicidad.wmv"/>
+
+        <MediaElement x:Name="publicidad1" HorizontalAlignment="Left" Height="68" Margin="184,0,0,0" VerticalAlignment="Top" Width="136" Source="image/CNE.mp4"/>
 
     </Grid>
 </Window>
