@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pantallasproyecto"
         mc:Ignorable="d"
-        Title="MenuAdmin" Height="221.008" Width="300" Closing="Window_Closing">
+        Title="MenuAdmin" Height="221.008" Width="300" Closing="Window_Closing" MinWidth="300" MinHeight="200">
     <Grid>
         <Button x:Name="btnAgregarpersona" Content="Agregar Persona" HorizontalAlignment="Left" Margin="162,66,0,0" VerticalAlignment="Top" Width="98"/>
         <Button x:Name="btnConsultar" Content="Consultar Resultados" HorizontalAlignment="Left" Margin="153,101,0,0" VerticalAlignment="Top" Width="117"/>
         <Image x:Name="i" HorizontalAlignment="Left" Height="95" Margin="19,26,0,0" VerticalAlignment="Top" Width="113" Source="image/admin22.jpg" Stretch="Fill"/>
+        <Button x:Name="btnregre" Content="Regresar" HorizontalAlignment="Left" Margin="107,160,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
