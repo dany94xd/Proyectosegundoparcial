@@ -67,5 +67,10 @@ Public Class AddVotante
 
     End Sub
 
+    Private Sub btnlimpiar_Click(sender As Object, e As RoutedEventArgs) Handles btnlimpiar.Click
+        txtcedula.Text = ""
+        txtnombre.Text = ""
+        txtapellido.Text = ""
 
+    End Sub
 End Class
