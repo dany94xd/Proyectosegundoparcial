@@ -1,7 +1,7 @@
 ﻿<Window x:Name="winlogadmin" x:Class="LoginAdmin"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="LoginAdmin" Height="300" Width="300" Closing="Window_Closing">
+    Title="LoginAdmin" Height="300" Width="300" Closing="Window_Closing" MinWidth="300" MinHeight="300">
     <Grid Background="#FF6FADEC">
         <Grid.RowDefinitions>
             <RowDefinition Height="108*"/>

@@ -1,7 +1,7 @@
 ﻿<Window x:Name="wincandi" x:Class="LoginCandidato"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="LoginCandidato" Height="300" Width="300" Closing="Window_Closing">
+    Title="LoginCandidato" Height="300" Width="300" Closing="Window_Closing" MinWidth="300" MinHeight="300">
     <Grid Background="#FFA1DBE4">
         <Grid.RowDefinitions>
             <RowDefinition Height="125*"/>

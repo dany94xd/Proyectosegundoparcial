@@ -1,24 +1,24 @@
 ﻿<Window x:Name="winuser" x:Class="MenuUser"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="Elegir Usuario" Height="421">
+    Title="Elegir Usuario" Height="421" MinWidth="300" MinHeight="300">
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="84*"/>
-            <RowDefinition Height="27*"/>
-            <RowDefinition Height="19*"/>
+            <RowDefinition Height="242*"/>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="57*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="105*"/>
             <ColumnDefinition Width="164*"/>
             <ColumnDefinition Width="111*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnvoto" Content="Login Votante" HorizontalAlignment="Left" Height="32" Margin="51,12,0,0" VerticalAlignment="Top" Width="83" Background="#FF46CB09" Grid.Row="1"/>
-        <Button x:Name="btncandi" Content="Login Candidato" HorizontalAlignment="Left" Height="32" Margin="120,12,0,0" VerticalAlignment="Top" Width="94" Grid.Column="1" Background="#FF3DCF1D" Grid.Row="1"/>
-        <Button x:Name="btnadmin" Content="Login Administrador" HorizontalAlignment="Left" Height="32" Margin="56,11,0,0" VerticalAlignment="Top" Width="115" Grid.Column="2" Background="#FF2FDA14" Grid.Row="1"/>
+        <Button x:Name="btnvoto" Content="Login Votante" HorizontalAlignment="Center" Margin="36,22,72,0" Background="#FF46CB09" Grid.Row="1" Height="32" VerticalAlignment="Top" Width="102"/>
+        <Button x:Name="btncandi" Content="Login Candidato" HorizontalAlignment="Center" Margin="122,22,90,0" Grid.Column="1" Background="#FF3DCF1D" Grid.Row="1" Height="32" VerticalAlignment="Top" Width="116"/>
+        <Button x:Name="btnadmin" Content="Login Administrador" HorizontalAlignment="Center" Margin="54,22,44,0" Grid.Column="2" Background="#FF2FDA14" Grid.Row="1" Height="32" VerticalAlignment="Top" Width="124"/>
         <Image x:Name="imagevoto" Margin="21,16,20,19" Source="image/voto11.jpg" Stretch="Fill"/>
-        <Image HorizontalAlignment="Left" Margin="30,16,0,0" VerticalAlignment="Top" Grid.Column="1" Source="image/descarga.jpg" Stretch="Fill" Height="217" Width="270"/>
-        <Image Margin="0,16,5,0" VerticalAlignment="Top" Grid.Column="2" Source="image/admin.png" Stretch="Fill" Height="217"/>
-        <Button x:Name="btnregresar" Content="Regresar" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top" Width="94" Height="24" Grid.Column="1" Grid.Row="2"/>
+        <Image Margin="44,26,14,10" Grid.Column="1" Source="image/descarga.jpg" Stretch="Fill"/>
+        <Image Margin="0,26,5,10" Grid.Column="2" Source="image/admin.png" Stretch="Fill"/>
+        <Button x:Name="btnregresar" Content="Regresar" HorizontalAlignment="Center" Margin="119,15,90,0" Height="32" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" Width="119"/>
     </Grid>
 </Window>
